@@ -47,7 +47,7 @@ def load_split():
 
 def main():
     batch_size = 32
-    data_path = 'nyu_depth_v2_labeled.mat'
+    data_path = '/content/drive/My Drive/Dataset/ready2.mat'
     learning_rate = 1.0e-5
     monentum = 0.9
     weight_decay = 0.0005
@@ -69,7 +69,7 @@ def main():
     model = FCRN(batch_size)
     #resnet = torchvision.models.resnet50(pretrained=True)
     resnet = torchvision.models.resnet50()
-    resnet.load_state_dict(torch.load('/home/pengfei/data/nets/ResNet/resnet50-19c8e357.pth'))
+    resnet.load_state_dict(torch.load('/content/resnet50-19c8e357.pth'))
     #resnet.load_state_dict(torch.load('/home/xpfly/nets/ResNet/resnet50-19c8e357.pth'))
     print("resnet50 loaded.")
     resnet50_pretrained_dict = resnet.state_dict()
@@ -184,7 +184,7 @@ def main():
 
             output = model(input_var)
             loss = loss_fn(output, depth_var)
-            print('loss:', loss.data.cpu()[0])
+            print('loss:', loss.data.cpu())
             count += 1
             running_loss += loss.data.cpu().numpy()
 
