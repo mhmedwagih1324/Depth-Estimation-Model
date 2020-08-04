@@ -46,7 +46,7 @@ def load_split():
 
 
 def main():
-    batch_size = 32
+    batch_size = 4
     data_path = '/content/drive/My Drive/Dataset/ready2.mat'
     learning_rate = 1.0e-5
     monentum = 0.9
