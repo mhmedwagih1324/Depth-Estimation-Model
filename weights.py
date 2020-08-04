@@ -5,7 +5,7 @@ import torch
 def load_weights(model, weights_file, dtype):
 
     model_params = model.state_dict()
-    data_dict = np.load(weights_file, encoding='latin1').item()
+    data_dict = np.load(weights_file, encoding='latin1', allow_pickle=True).item()
 
     if True:
         model_params['conv1.weight'] = torch.from_numpy(data_dict['conv1']['weights']).type(dtype).permute(3,2,0,1)
