@@ -46,11 +46,11 @@ def load_split():
 
 
 def main():
-    batch_size = 4
-    data_path = '/content/drive/My Drive/Dataset/ready2.mat'
+    batch_size = 2
+    data_path = '/content/drive/My Drive/Dataset/ready_dataset (1).mat'
     learning_rate = 1.0e-5
     monentum = 0.9
-    weight_decay = 0.0005
+    weight_decay = 0.0002
     num_epochs = 50
     resume_from_file = False
 
