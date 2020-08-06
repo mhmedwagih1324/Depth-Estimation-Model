@@ -76,7 +76,7 @@ def main():
 
 #-----------------------------------------------------------
     #model.load_state_dict(load_weights(model, weights_file, dtype))
-    chkp = torch.load('checkpoint.pth.tar')
+    chkp = torch.load('our_checkpoint.pth.tar')
     model.load_state_dict(chkp['state_dict'])
 #-----------------------------------------------------------
     """
