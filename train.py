@@ -69,12 +69,16 @@ def main():
     model = FCRN(batch_size)
     #resnet = torchvision.models.resnet50(pretrained=True)
     resnet = torchvision.models.resnet50()
-    resnet.load_state_dict(torch.load('/content/resnet50-19c8e357.pth'))
+    resnet.load_state_dict(torch.load('/content/model/resnet50-19c8e357.pth'))
     #resnet.load_state_dict(torch.load('/home/xpfly/nets/ResNet/resnet50-19c8e357.pth'))
     print("resnet50 loaded.")
     resnet50_pretrained_dict = resnet.state_dict()
 
-    model.load_state_dict(load_weights(model, weights_file, dtype))
+#-----------------------------------------------------------
+    #model.load_state_dict(load_weights(model, weights_file, dtype))
+    chkp = torch.load('checkpoint.pth.tar')
+    model.load_state_dict(chkp['state_dict'])
+#-----------------------------------------------------------
     """
     print('\nresnet50 keys:\n')
     for key, value in resnet50_pretrained_dict.items():
