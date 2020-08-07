@@ -46,8 +46,8 @@ def load_split():
 
 
 def main():
-    batch_size = 2
-    data_path = 'ready_dataset.mat'
+    batch_size = 16
+    data_path = 'augmented_dataset.mat'
     learning_rate = 1.0e-5
     monentum = 0.9
     weight_decay = 0.0002
