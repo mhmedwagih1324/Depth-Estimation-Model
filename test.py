@@ -12,7 +12,7 @@ import torchvision.transforms as transforms
 
 
 #nyu = h5py.File('nyu_depth_v2_labeled.mat')
-data_path = 'ready_dataset.mat'
+data_path = 'augmented_dataset.mat'
 dtype = torch.cuda.FloatTensor
 
 batch_size = 1
