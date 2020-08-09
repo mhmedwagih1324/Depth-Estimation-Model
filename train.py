@@ -167,9 +167,9 @@ def main():
     for epoch in range(num_epochs):
 
         # 4.Optim
-        # optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+        optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
         # optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=monentum)
-        optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=monentum, weight_decay=weight_decay)
+        # optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate, momentum=monentum, weight_decay=weight_decay)
         print("optimizer set.")
 
         print('Starting train epoch %d / %d' % (start_epoch + epoch + 1, num_epochs))
